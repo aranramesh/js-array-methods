@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+
+// find method
+let arr = [
+            { name: "bmw", value: "87 lacs", branch: "chennai", qty: 0 },
+            { name: "audi", value: "1 crore", branch: "mumbai", qty: 0 },
+            { name: "jaguar", value: "60 lacs", branch: "banglore", qty: 0 },
+            { name: "skoda", value: "30 lacs", branch: "kolkata", qty: 0 }];
+
+        let obj = arr.find(val => val.name === prompt("enter a value"));
+
+
+        console.log(obj);
+
+    // map method
+    const persons = [
+        {firstname : "Malcom", lastname: "Reynolds"},
+        {firstname : "Kaylee", lastname: "Frye"},
+        {firstname : "Jayne", lastname: "Cobb"}
+      ];
+      
+      persons.map(getFullName);
+      
+      function getFullName(item) {
+        return [item.firstname,item.lastname].join(" ");
+      }
+      
+    // filter
+    let arr2= [
+        {  qty: 10 },
+        {  qty: 20 },
+        {  qty: 30 },
+        {  qty: 40 }];
+
+    let obj2 = arr2.filter(val => val.qty > 10 );
+
+
+    console.log(obj2);
+
+
+
+// reduce method
+
+    let start = 0;
+
+let obj5 = [{n: 5}, {n: 9}, {n: 13}, {n: 25}, {n: 40}]
+
+let sum = obj5.reduce(function (acc, cur) {
+
+    return acc + cur
+
+},start)
+
+console.log(sum)
+
+
+    //foreach method
+    const obj1 = {
+        name: 'Jean-Luc Picard',
+        rank: 'Captain'
+        };
+Object.keys(obj1).forEach(key => {
+console.log(key, obj1[key]);
+});
+
+// reduce right
+
+
+    </script>
+</body>
+</html>
