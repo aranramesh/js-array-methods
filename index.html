@@ -9,10 +9,27 @@
 </head>
 
 <body>
+<div class="container">
+    <h3>nee loosuthana</h3>
+    <div class="btns">   
+     <button id="btn1" onclick="user1()">AAMA</button>
+    <button id="btn2">illai</button>
+</div>
+
+</div>
+
 
 
     <script type="module" src="app.js">
-
+        let btn1 =document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2')
+        
+      function user1(){
+        if(button === btn1){
+            document.write("enaku theriyum")
+        }
+        user1();
+      }
 
         // // find method
         // let arr = [
@@ -136,11 +153,26 @@ var arr3 = [
          
     var resul = arr3.join(", ");
     console.log(resul);
+//   sort method
+        var list = {"you": 100, "me": 75, "foo": 116, "bar": 15};
+        
+        let keysSorted = Object.keys(list).sort(function(a,b)
+            {return list[a]-list[b]})
+            
+            console.log(keysSorted); 
 
-a = [0,1,2,3,];
-for(a[-1] in a){
-    console.log(a)
-}
+// from method
+let arr2= [
+                {  qty: 10 },
+                {  qty: 20 },
+                {  qty: 30 },
+                {  qty: 40 }];
+
+            let obj2 = Array.from(val => val.qty + 10 );
+
+
+            console.log(obj2);
+
 
 
 
