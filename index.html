@@ -1,83 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
 
-    <script>
-        
 
-// find method
-let arr = [
+    <script type="module" src="app.js">
+
+
+        // // find method
+        // let arr = [
+        //             { name: "bmw", value: "87 lacs", branch: "chennai", qty: 0 },
+        //             { name: "audi", value: "1 crore", branch: "mumbai", qty: 0 },
+        //             { name: "jaguar", value: "60 lacs", branch: "banglore", qty: 0 },
+        //             { name: "skoda", value: "30 lacs", branch: "kolkata", qty: 0 }];
+
+        //         let obj = arr.find(val => val.name === prompt("enter a value"));
+
+
+        //         console.log(obj);
+
+        //     // map method
+        //     const persons = [
+        //         {firstname : "Malcom", lastname: "Reynolds"},
+        //         {firstname : "Kaylee", lastname: "Frye"},
+        //         {firstname : "Jayne", lastname: "Cobb"}
+        //       ];
+
+        //       persons.map(getFullName);
+
+        //       function getFullName(item) {
+        //         return [item.firstname,item.lastname].join(" ");
+        //       }
+
+        //     // filter
+        //     let arr2= [
+        //         {  qty: 10 },
+        //         {  qty: 20 },
+        //         {  qty: 30 },
+        //         {  qty: 40 }];
+
+        //     let obj2 = arr2.filter(val => val.qty > 10 );
+
+
+        //     console.log(obj2);
+
+
+
+        // // reduce method
+
+        var o = {
+            a: { value: 1 },
+            b: { value: 2 },
+            c: { value: 3 }
+        };
+
+        Object.keys(o).reduce(function (previous, key) {
+            return previous + o[key].value;
+        }, 0);
+
+
+        //     //foreach method
+        //     const obj1 = {
+        //         name: 'Jean-Luc Picard',
+        //         rank: 'Captain'
+        //         };
+        // Object.keys(obj1).forEach(key => {
+        // console.log(key, obj1[key]);
+        // });
+
+        // reduce right
+
+
+        // pop method
+        let arr = [
             { name: "bmw", value: "87 lacs", branch: "chennai", qty: 0 },
             { name: "audi", value: "1 crore", branch: "mumbai", qty: 0 },
             { name: "jaguar", value: "60 lacs", branch: "banglore", qty: 0 },
             { name: "skoda", value: "30 lacs", branch: "kolkata", qty: 0 }];
 
-        let obj = arr.find(val => val.name === prompt("enter a value"));
-
+        let obj = arr.pop();
 
         console.log(obj);
 
-    // map method
-    const persons = [
-        {firstname : "Malcom", lastname: "Reynolds"},
-        {firstname : "Kaylee", lastname: "Frye"},
-        {firstname : "Jayne", lastname: "Cobb"}
-      ];
-      
-      persons.map(getFullName);
-      
-      function getFullName(item) {
-        return [item.firstname,item.lastname].join(" ");
-      }
-      
-    // filter
-    let arr2= [
-        {  qty: 10 },
-        {  qty: 20 },
-        {  qty: 30 },
-        {  qty: 40 }];
+        //reduce right method
 
-    let obj2 = arr2.filter(val => val.qty > 10 );
+        const a = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+
+        const right = Object.keys(a).reduceRight((prev, cur) => prev + cur);
+
+        console.log(right);
 
 
-    console.log(obj2);
+        // includes method
 
-
-
-// reduce method
-
-    let start = 0;
-
-let obj5 = [{n: 5}, {n: 9}, {n: 13}, {n: 25}, {n: 40}]
-
-let sum = obj5.reduce(function (acc, cur) {
-
-    return acc + cur
-
-},start)
-
-console.log(sum)
-
-
-    //foreach method
-    const obj1 = {
-        name: 'Jean-Luc Picard',
-        rank: 'Captain'
+        const userins = {
+            fname: "aran",
+            lname: "ramesh",
+            age: 22,
+            company1: "zoho",
+            company2: "freshworks"
         };
-Object.keys(obj1).forEach(key => {
-console.log(key, obj1[key]);
-});
+        let result = Object.keys(userins).includes("age");
+        console.log(result);
 
-// reduce right
+
+        //flat map 
+        const arr1 = [  1, 2, [ 3 ],  [ 4, 5 ], 6,];
+
+        const flattened = arr1.flatMap(num => num);
+
+        console.log(flattened);
+
+
+        // some method
+
+        // const ages = [{ a: 3, b: 10, c: 18, d: 20 }];
+
+        // let output = Object.keys(ages).some((key) => key > 10{
+        //     console.log(output);
+        // });
+
+//   join method
+var arr3 = [
+        {name: "joe", age: 21, },
+        {name: "Peter", age: 21, },
+        {name: "kevin", age: 21, }
+    ];
+         
+    var resul = arr3.join(", ");
+    console.log(resul);
+
+a = [0,1,2,3,];
+for(a[-1] in a){
+    console.log(a)
+}
+
 
 
     </script>
 </body>
+
 </html>
